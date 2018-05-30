@@ -1,3 +1,1 @@
-# C-Codes
-
-Learning C programming
+Learning C
