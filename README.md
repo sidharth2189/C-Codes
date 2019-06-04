@@ -1,4 +1,4 @@
-Learning Programming
+## Learning and Exploring Programming
 C, C++, Python
 
 
