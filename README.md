@@ -105,10 +105,10 @@ Host Endianness,
 Closest Meeting Point
 
 ## Resources:
-1) https://www.educative.io/collection/5642554087309312/5679846214598656?authorName=Coderust
+1) [CodeRust](https://www.educative.io/collection/5642554087309312/5679846214598656?authorName=Coderust)
 2) [Data Structures & Algorithms in Python, Udacity](https://classroom.udacity.com/courses/ud513)
-3) https://projecteuler.net/
-4) https://leetcode.com/
+3) [Project Euler](https://projecteuler.net/)
+4) [LeetCode](https://leetcode.com/)
 
 ## Further development areas
 1) Design Patterns: Factory Builder, Singleton
