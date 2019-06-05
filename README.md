@@ -111,6 +111,7 @@ Closest Meeting Point
 4) [LeetCode](https://leetcode.com/)
 5) [Introduction To Algorithms Wiki](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 6) [CodeChef](https://www.codechef.com)
+7) [Programming Journey: Blog](https://blog.usejournal.com/my-competitive-programming-journey-to-google-5f51c211c715)
 
 ## Further development areas
 1) Design Patterns: Factory Builder, Singleton
