@@ -112,6 +112,7 @@ Closest Meeting Point
 5) [Introduction To Algorithms Wiki](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 6) [CodeChef](https://www.codechef.com)
 7) [Programming Journey: Blog](https://blog.usejournal.com/my-competitive-programming-journey-to-google-5f51c211c715)
+8) [NPTEL-Data Structures And Algorithms(IIT Delhi)](https://nptel.ac.in/courses/106102064/)
 
 ## Further development areas
 1) Design Patterns: Factory Builder, Singleton
