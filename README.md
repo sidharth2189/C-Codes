@@ -109,6 +109,7 @@ Closest Meeting Point
 2) [Data Structures & Algorithms in Python, Udacity](https://classroom.udacity.com/courses/ud513)
 3) [Project Euler](https://projecteuler.net/)
 4) [LeetCode](https://leetcode.com/)
+5) [Introduction To Algorithms Wiki](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 
 ## Further development areas
 1) Design Patterns: Factory Builder, Singleton
