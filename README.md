@@ -115,6 +115,6 @@ Closest Meeting Point
 8) [NPTEL-Data Structures And Algorithms(IIT Delhi)](https://nptel.ac.in/courses/106102064/)
 
 ## Further development areas
-1) Design Patterns: Factory Builder, Singleton
+1) [Design Patterns in C++: Factory Builder, Singleton](https://en.wikibooks.org/wiki/C%2B%2B_Programming/Code/Design_Patterns#Creational_Patterns)
 2) Clean code principles
 3) ROS
