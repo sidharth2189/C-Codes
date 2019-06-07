@@ -15,53 +15,61 @@ return [0, 1].
 */
 
 class Solution {
-public:
-    vector<int> index;
-    
+public:    
     vector<int> twoSum(vector<int>& nums, int target) 
     {
-        int left_index, right_index;
+        /* vector to hold output */
+        vector<int> index;
         
-        // Size of array
-        int n;
-        n = sizeof(nums)/(sizeof(nums[0]));
+        /* Create a copy of the input array */
+        vector<int> nums_cpy;
+        nums_cpy.assign(nums.begin(), nums.end());
 
-        /* step -1) Sort the array in ascending order*/
-        sort(nums.begin(), nums.begin()+n);
+        /* step -1) Sort the array in ascending order */
+        sort(nums_cpy.begin(), nums_cpy.end());
         
-        /* Step -2) Initialize two index variables to find the candidate 
+        /* Step -2) Initialize two variables to find the candidate 
             elements in the sorted array.
             
-            (a) Initialize first to the leftmost index: l = 0
-            (b) Initialize second  the rightmost index:  r = artray_size-1 */
-        
-        left_index = 0;
-        right_index = n - 1;
+            (a) Initialize first to the leftmost array element address
+            (b) Initialize second  the rightmost array element address  */
+
+        auto left = nums_cpy.begin();
+        auto right = nums_cpy.end() - 1;
 
         /* Step -3) Loop while left_index < right_index.
-            (a) If (Array[left_index] + Array[right_index] == sum)  then return 1
+            (a) If (Array[left_index] + Array[right_index] == sum)  then return indices
             (b) Else if( Array[left_index] + Array[right_index] <  sum )  then left_index++
             (c) Else right_index-- */
         
-        while (left_index < right_index)
+        while (left < right)
         {
-            if (nums[left_index] + nums[right_index] == target)
+            if (*left + *right == target)
             {
-                index.push_back(left_index);
-                index.push_back(right_index);
-                break;
+                for (int i = 0; i < nums.size(); i++) 
+                {
+                    if (nums[i] == *left) 
+                    {
+                        index.push_back(i);
+                    } 
+                    else if(nums[i] == *right) 
+                    {
+                        index.push_back(i);
+                    }
+                }
+                return index;
             }
-            else if (nums[left_index] + nums[right_index] < target)
+            else if (*left + *right< target)
             {
-                left_index++;
+                left++;
             }
             else
             {
-                right_index--;
+                right--;
             }
         }
 
-        /* Step -4) If no candidates in whole array - return 0 */
-        return index;
+        /* Step -4) If no candidates in whole array - return null vector */
+        return vector<int>();
     }
 };
