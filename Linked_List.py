@@ -67,7 +67,23 @@ class LinkedList(object):
     
     def delete(self, value):
         """Delete the first node with a given value."""
-        pass
+        current = self.head
+        
+        if (self.head.value == value):
+                delete_item = self.head
+                self.head = current.next
+                delete_item.next = None
+                return None
+        
+        while current.next:
+            if((current.next.value == value) and (current.next.next == None)):
+                current.next = None
+                return None
+            elif (current.next.value == value):
+                delete_item = current.next
+                current.next = delete_item.next
+                delete_item.next = None
+                return None
 
 # Test cases
 # Set up some Elements
@@ -93,10 +109,10 @@ ll.insert(e4,3)
 print ll.get_position(3).value
 
 # Test delete
-#ll.delete(1)
+ll.delete(1)
 # Should print 2 now
-#print ll.get_position(1).value
+print ll.get_position(1).value
 # Should print 4 now
-#print ll.get_position(2).value
+print ll.get_position(2).value
 # Should print 3 now
-#print ll.get_position(3).value
+print ll.get_position(3).value
