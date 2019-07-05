@@ -6,8 +6,6 @@
  */
   
 #include <iostream> 
-#include <new>
-using namespace std; 
 
 class Solution
 {
@@ -17,22 +15,21 @@ class Solution
 	int x;
 	
 	// Default Constructor
-	Solution() 
+	Solution(): x(10) 
     { 
-        cout << "Default Constructor called" << endl;  
-        x = 10; 
+        std::cout << "Default Constructor called" << std::endl;
     }
 	
 	// Parameterized Constructor
 	Solution(int input) 
     { 
-        cout << "Parametrized Constructor called" << endl; 
+        std::cout << "Parametrized Constructor called" << std::endl; 
         x = input; 
     }
 	// Function to display value of member
 	void display_value()
 	{
-		cout<< "Value of 'x' is: "<< x << endl;
+		std::cout<< "Value of 'x' is: "<< x << std::endl;
 	}
 	
 	// Function to get value of member
@@ -50,8 +47,9 @@ class Solution
 	// Destructor
 	~Solution() 
     { 
-        cout << "Destructor called" << endl;  
+        std::cout << "Destructor called" << std::endl;  
     }
+    
 };
 
 int main()
@@ -75,13 +73,16 @@ int main()
 	
 	// Get value of 'x'
 	sample = obj1.get_value();
-	cout << "Assigned value of 'x' is " << sample << endl;
+	std::cout << "Assigned value of 'x' is " << sample << std::endl;
 	
 	// Scope of an object
 	if (index < 2)
 	{
 		Solution obj4;
 	}
+	
+	// delete reference to object obj2
+	delete obj2;
 	
 	return 0;
 }
