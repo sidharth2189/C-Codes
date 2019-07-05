@@ -9,11 +9,12 @@
 
 class Solution
 {
-	public:
+	private:
 	
 	// Member
 	int x;
 	
+	public:
 	// Default Constructor
 	Solution(): x(10) 
     { 
