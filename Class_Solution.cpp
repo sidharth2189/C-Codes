@@ -3,6 +3,9 @@
  * B. Create two objects, one with new operator and other without new operator
  * C. Create an integer variable 'x', in the class whose default value is 10
  * D. Create mechanism in class which displays, gets and sets value of 'x'
+ * E. Copy one solution object into another.
+ * F. Add a data member to Solution class char *str and create the default array with size 50 and pass a default string as “hi this is my first cpp program ”
+ * G. Write set and get function to change that string similar to the function which you have written it for int x;
  */
   
 #include <iostream> 
@@ -13,36 +16,51 @@ class Solution
 	
 	// Member
 	int x;
+	char *str = new char[50]; // char pointer that points to a char array of size 50.
 	
 	public:
 	// Default Constructor
-	Solution(): x(10) 
+	Solution(): x(10), str("Hi, This is my first cpp program") 
     { 
         std::cout << "Default Constructor called" << std::endl;
     }
 	
 	// Parameterized Constructor
-	Solution(int input) 
+	Solution(int input, char* c) 
     { 
         std::cout << "Parametrized Constructor called" << std::endl; 
-        x = input; 
+        x = input;
+		str = c;
     }
 	// Function to display value of member
 	void display_value()
 	{
 		std::cout<< "Value of 'x' is: "<< x << std::endl;
+		std::cout<< "String is : "<< str << std::endl;
 	}
 	
-	// Function to get value of member
-	int get_value()
+	// Function to get value of int member
+	int get_int_value()
 	{
 		return x;
 	}
 	
-	// Function to set value of member
-	void set_value(int input)
+	// Function to set value of int member
+	void set_int_value(int input)
 	{
 		x = input;
+	}
+	
+	// Function to get value of char member
+	char get_char_value()
+	{
+		return *str;
+	}
+	
+	// Function to set value of char member
+	void set_char_value(char* input)
+	{
+		str = input;
 	}
 	
 	// Destructor
@@ -56,7 +74,6 @@ class Solution
 int main()
 {
 	int index = 0;
-	int sample;
 	
 	// Create object
 	Solution obj1;
@@ -66,15 +83,16 @@ int main()
 	obj2->display_value();
 	
 	// Create object by calling parameterized constructors
-	Solution obj3(10);
+	Solution obj3(10, "Strings changed");
 	obj3.display_value();
 	
-	// Set value of 'x'
-	obj1.set_value(14);
+	// Set value of 'x' and 'str'
+	obj1.set_int_value(14);
+	obj1.set_char_value("New String");
 	
 	// Get value of 'x'
-	sample = obj1.get_value();
-	std::cout << "Assigned value of 'x' is " << sample << std::endl;
+	std::cout << "Assigned value of 'x' is " << obj1.get_int_value() << std::endl;
+	std::cout << "Assigned value of 'str' is " << obj1.get_char_value() << std::endl;
 	
 	// Scope of an object
 	if (index < 2)
@@ -82,8 +100,11 @@ int main()
 		Solution obj4;
 	}
 	
-	// delete reference to object obj2
+	// Delete reference to object obj2
 	delete obj2;
+	
+	// Copy one solution object to another
+	Solution obj5 = obj1;
 	
 	return 0;
 }
