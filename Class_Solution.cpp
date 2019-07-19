@@ -16,7 +16,7 @@ class Solution
 	
 	// Member
 	int x;
-	char *str = new char[50]; // char pointer that points to a char array of size 50.
+	std::string str;
 	
 	public:
 	// Default Constructor
@@ -26,7 +26,7 @@ class Solution
     }
 	
 	// Parameterized Constructor
-	Solution(int input, char* c) 
+	Solution(int input, std::string c) 
     { 
         std::cout << "Parametrized Constructor called" << std::endl; 
         x = input;
@@ -52,13 +52,13 @@ class Solution
 	}
 	
 	// Function to get value of char member
-	char get_char_value()
+	std::string get_char_value()
 	{
-		return *str;
+		return str;
 	}
 	
 	// Function to set value of char member
-	void set_char_value(char* input)
+	void set_char_value(std::string input)
 	{
 		str = input;
 	}
